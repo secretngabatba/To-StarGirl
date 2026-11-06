@@ -101,11 +101,12 @@ h1 + h1 {
    BOUQUET
 ========================= */
 
+
 .bouquet {
     width: 100%;
     max-width: 390px;
-    height: 365px;
-    margin: 15px auto 5px;
+    height: 390px;
+    margin: 15px auto;
     position: relative;
 }
 
@@ -117,88 +118,81 @@ h1 + h1 {
 
 .bouquet-art {
     transform-origin: center bottom;
-    animation: float 4s ease-in-out infinite;
+    animation: bouquetFloat 4s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-5px);
-    }
-}
-
-.sparkle {
-    position: absolute;
-    color: var(--gold);
-    font-size: 23px;
-    animation: twinkle 2s ease-in-out infinite alternate;
-    z-index: 2;
-}
-
-.sparkle.one {
-    top: 60px;
-    left: 7%;
-}
-
-.sparkle.two {
-    top: 100px;
-    right: 5%;
-    animation-delay: .5s;
-}
-
-.sparkle.three {
-    top: 210px;
-    left: 10%;
-    animation-delay: .8s;
-}
-
-.sparkle.four {
-    top: 230px;
-    right: 10%;
-    animation-delay: .3s;
-}
-
-@keyframes twinkle {
-    from { opacity: .35; transform: scale(.8); }
-    to { opacity: 1; transform: scale(1.2); }
-}
-
-/* =========================
-   ROSES AND WHEAT
-========================= */
-
-.rose-petal {
-    fill: #8c1029;
-    stroke: #4b0617;
-    stroke-width: 1.5;
-}
-
-.rose-light {
-    fill: #b52b43;
-    stroke: #640a20;
-    stroke-width: 1.5;
-}
-
-.rose-dark {
-    fill: #58091d;
-    stroke: #35000d;
-    stroke-width: 1.5;
+@keyframes bouquetFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
 }
 
 .wheat-stem {
     fill: none;
-    stroke: #c49a48;
-    stroke-width: 2.5;
+    stroke: #8b9561;
+    stroke-width: 2.2;
     stroke-linecap: round;
 }
 
-.wheat-grain {
-    fill: #e6c16c;
-    stroke: #a47b34;
+.wheat-gold {
+    fill: #d9b45e;
+    stroke: #a8863e;
     stroke-width: .8;
 }
+
+.wheat-pink {
+    fill: #d99ba5;
+    stroke: #b87885;
+    stroke-width: .8;
+}
+
+.wheat-green {
+    fill: #a6ad7c;
+    stroke: #737e50;
+    stroke-width: .8;
+}
+
+.rose-white {
+    fill: #fffaf0;
+    stroke: #d8cfc1;
+    stroke-width: 1.3;
+}
+
+.rose-shadow {
+    fill: #eee5d9;
+    stroke: #d0c2b4;
+    stroke-width: 1;
+}
+
+.rose-detail {
+    fill: none;
+    stroke: #d7c5b8;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.bouquet-sparkle {
+    position: absolute;
+    color: #c5a15b;
+    font-size: 20px;
+    animation: sparkle 2.5s ease-in-out infinite alternate;
+}
+
+.bouquet-sparkle.one {
+    top: 65px;
+    left: 8%;
+}
+
+.bouquet-sparkle.two {
+    top: 115px;
+    right: 7%;
+    animation-delay: .8s;
+}
+
+@keyframes sparkle {
+    from { opacity: .3; transform: scale(.8); }
+    to { opacity: 1; transform: scale(1.15); }
+}
+
 
 /* =========================
    BUTTON
@@ -581,13 +575,7 @@ h1 + h1 {
             I just wanted to say thank you for today.
             I genuinely had a great time with you, and
             I'm really glad we got to spend some time together.
-        </p>
-
-        <p>
             I hope you enjoyed it as much as I did.
-            I don't know if I managed to make your day
-            a little better, but I hope I did, even just
-            in some small way.
         </p>
 
         <p>
